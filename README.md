@@ -5,7 +5,7 @@ A decentralized social network concept inspired by Ace Combat 7. Isolated satell
 
 ---
 
-# 🛰️ rede-sky | Project Sky Isolated
+# 🛰️ Project Kessler | Network Blackout | Project Sky Isolated
 
 > **"The sky is not connected."** 
 > *— Global Network Status, Post-Farbanti Blackout.*
