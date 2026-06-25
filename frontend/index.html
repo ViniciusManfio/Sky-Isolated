@@ -3,180 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rede Sky Isolated </title>
-</head>
-
-    <body>
-    
-        <header>
-            <nav class="nav-container">
-                <div class="sat-logo">
-                    <img src="images/satellite.png" alt="logo do site">
-                </div>
-        
-                <div class="nav-links">
-                    <a href="#"> Login </a>
-        
-                </div>
-            </nav>
-        </header>
-    
-        <main>
-            <div class="teste">
-                <h1 id="titulo-principal"> 
-                    <span> Rede </span>
-                    <span> Sky Isolated </span>
-                </h1>
-            </div>
-            <div id="container-principal">
-                <div id="bandeja-lateral">
-
-                    <div class="perfil flex-1">
-                        <a href=""> Teste </a>
-                    </div>
-                    <div class="perfil flex-1">
-                        <a href=""> Teste </a>
-                    </div>
-                    <div class="perfil flex-1">
-                        <a href=""> Teste </a>
-                    </div>
-                    <div class="perfil flex-1">
-                        <a href=""> Teste </a>
-                    </div>
-                    <div class="perfil flex-1">
-                        <a href=""> Teste </a>
-                    </div>
-                   
-                    
-                </div>
-                
-                <div id="principal-conteudo">
-                    <h2> Aqui deveria ter o conteudo principal  </h2>
-                </div>
-            </div>
-        </main>
-    </body>
-</html>
-
-
-<style>
-
-    body {
-            margin: 0;
+    <title>Rede Sky Isolated</title>
+    <style>
+        /* ======================================== */
+        /* 🎨 Variáveis de Cor e Estilo */
+        /* ======================================== */
+        :root {
+            --color-primary: #2563eb; /* Azul primário para navegação */
+            --color-sidebar-bg: #000000; /* Preto */
+            --color-background: #80bfff; /* Aquamarine, mas mais suave */
+            --color-text-light: white;
+            --color-text-gold: wheat;
         }
 
+        /* ======================================== */
+        /* ⚙️ Reset e Base */
+        /* ======================================== */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4; /* Adicionado um fundo geral para o body */
+        }
 
+        /* ======================================== */
+        /* 🧭 Cabeçalho (Header e Navegação) */
+        /* ======================================== */
+        header {
+            background-color: skyblue;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .sat-logo {
-        width: 40px;
-        height: 40px;
-        padding-left: 50px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            max-width: 1200px; /* Limita a largura para um visual mais profissional */
+            margin: 0 auto; /* Centraliza o conteúdo */
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
-    #container-principal {
-        height: 600px;
-        background-color: aquamarine;
-        display: flex;
-    }
+        .sat-logo img {
+            width: 40px;
+            height: 40px;
+            /* Removi o padding-left do div, movendo o espaçamento para o container */
+            display: block; 
+        }
 
-    #bandeja-lateral {
-        background-color: black;
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-left: 50px;
-        justify-content: center;
-    }
+        .nav-links a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--color-primary);
+        }
+
+        /* ======================================== */
+        /* 🏠 Layout Principal */
+        /* ======================================== */
+        main {
+            padding: 20px;
+        }
+
+        .teste {
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        #titulo-principal {
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+        
+        #titulo-principal span {
+            display: block;
+        }
+
+        #container-principal {
+            display: flex;
+            height: 600px;
+            background-color: var(--color-background);
+            /* Removi margens fixas para que o layout seja mais flexível */
+            margin-top: 10px;
+            border-radius: 5px;
+            overflow: hidden; /* Garante que os elementos não transbordem */
+        }
+
+        /* ======================================== */
+        /* 🧭 Barra Lateral (Sidebar) */
+        /* ======================================== */
+        #bandeja-lateral {
+            background-color: var(--color-sidebar-bg);
+            display: flex;
+            flex-direction: column; /* Empilha verticalmente */
+            width: 250px; /* Definindo uma largura fixa para a barra lateral */
+            padding: 20px 0;
+            /* Removi as margens fixas de topo/base para usar padding */
+        }
+        
+        .perfil-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Garante que os itens da lista fiquem um abaixo do outro */
+        }
+
+        .perfil-list li {
+            width: 100%;
+        }
+
+        .perfil-list a {
+            display: block;
+            text-decoration: none;
+            color: var(--color-text-gold);
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: left;
+        }
+
+        .perfil-list a:hover {
+            background-color: var(--color-primary);
+            transform: translateX(5px); /* Efeito de hover mais sutil */
+        }
+
+        /* ======================================== */
+        /* 📝 Conteúdo Principal */
+        /* ======================================== */
+        #principal-conteudo {
+            flex-grow: 1; /* Ocupa todo o espaço restante */
+            color: var(--color-text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+        }
+
+        /* ======================================== */
+        /* 📱 Responsividade Básica */
+        /* ======================================== */
+        @media (max-width: 800px) {
+            /* Em telas menores, a barra lateral vira um menu de topo */
+            #container-principal {
+                flex-direction: column;
+                height: auto; /* Permite que o conteúdo cresça */
+            }
+
+            #bandeja-lateral {
+                width: 100%; /* Ocupa toda a largura */
+                flex-direction: row; /* Os itens ficam lado a lado */
+                padding: 0;
+            }
+            
+            .perfil-list {
+                flex-direction: row; /* Coloca os itens na mesma linha */
+                justify-content: space-around;
+            }
+
+            .perfil-list li {
+                width: auto; /* Não força largura fixa */
+            }
+            
+            .perfil-list a {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
     
-    .perfil {
-        display: flex;
-        margin: 10px;
-        color: white;
-    }
+    <header>
+        <nav class="nav-container">
+            <div class="sat-logo">
+                <img src="images/satellite.png" alt="Logo Rede Sky Isolated">
+            </div>
+        
+            <div class="nav-links">
+                <a href="#">Login</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="teste">
+            <h1 id="titulo-principal"> 
+                <span>Rede</span>
+                <span>Sky Isolated</span>
+            </h1>
+        </div>
 
-    .perfil a {
-        margin: 0px;
-        padding: 10px;
-        text-decoration: none;
-        color: wheat;
-    }
-
-    .perfil a:hover {
-        transition: 0.33s;
-        transform: scale(1.05);
-        background-color: blue;
-    }
-
-    #principal-conteudo {
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        height: 60px;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 30px;
-        padding-right: 30px;
-
-    }
-
-    nav a:hover {
-        background-color: #2563eb;
-    }
-
-    .nav-container {
-        box-sizing: border-box;
-        margin: 0px;
-        background-color: skyblue;
-        height: 60px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 6px 10px rgb(0,0,0,0.3);
-    }
-
-    .nav-links {
-        font-size: 25px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    h1 span {
-        display: block;
-    }
-
-    .teste {
-        background-color: blueviolet;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #titulo-principal {
-        background-color: blue;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .flex-1 {
-        flex:1;
-    }
-</style>
+        <div id="container-principal">
+            <!-- O sidebar agora usa uma lista semântica -->
+            <aside id="bandeja-lateral">
+                <ul class="perfil-list">
+                    <li><a href="#">Teste 1</a></li>
+                    <li><a href="#">Teste 2</a></li>
+                    <li><a href="#">Teste 3</a></li>
+                    <li><a href="#">Teste 4</a></li>
+                    <li><a href="#">Teste 5</a></li>
+                </ul>
+            </aside>
+            
+            <div id="principal-conteudo">
+                <h2>Aqui deveria ter o conteúdo principal</h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
