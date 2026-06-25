@@ -28,6 +28,32 @@
                     <span> Sky Isolated </span>
                 </h1>
             </div>
+            <div id="container-principal">
+                <div id="bandeja-lateral">
+
+                    <div class="perfil flex-1">
+                        <a href=""> Teste </a>
+                    </div>
+                    <div class="perfil flex-1">
+                        <a href=""> Teste </a>
+                    </div>
+                    <div class="perfil flex-1">
+                        <a href=""> Teste </a>
+                    </div>
+                    <div class="perfil flex-1">
+                        <a href=""> Teste </a>
+                    </div>
+                    <div class="perfil flex-1">
+                        <a href=""> Teste </a>
+                    </div>
+                   
+                    
+                </div>
+                
+                <div id="principal-conteudo">
+                    <h2> Aqui deveria ter o conteudo principal  </h2>
+                </div>
+            </div>
         </main>
     </body>
 </html>
@@ -50,6 +76,49 @@
         align-items: center;
     }
 
+    #container-principal {
+        height: 600px;
+        background-color: aquamarine;
+        display: flex;
+    }
+
+    #bandeja-lateral {
+        background-color: black;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 50px;
+        justify-content: center;
+    }
+    
+    .perfil {
+        display: flex;
+        margin: 10px;
+        color: white;
+    }
+
+    .perfil a {
+        margin: 0px;
+        padding: 10px;
+        text-decoration: none;
+        color: wheat;
+    }
+
+    .perfil a:hover {
+        transition: 0.33s;
+        transform: scale(1.05);
+        background-color: blue;
+    }
+
+    #principal-conteudo {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     nav a {
         color: white;
         text-decoration: none;
@@ -69,7 +138,7 @@
     .nav-container {
         box-sizing: border-box;
         margin: 0px;
-        background-color: blueviolet;
+        background-color: skyblue;
         height: 60px;
         display: flex;
         flex-direction: row;
@@ -105,5 +174,9 @@
         background-color: blue;
         justify-content: center;
         align-items: center;
+    }
+
+    .flex-1 {
+        flex:1;
     }
 </style>
